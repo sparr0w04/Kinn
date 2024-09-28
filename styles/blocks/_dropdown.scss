@@ -1,0 +1,91 @@
+ .dropdown {
+    position: relative;
+    display: inline-block;
+    transition-duration: var(--transition-duration);
+
+
+    &__dropbtn {
+        font-family: inherit;
+        text-transform: uppercase;
+        background-color: initial;
+        border: none;
+        transition-duration: var(--transition-duration);
+        color: var(--color-olive-alt);
+
+
+        @include hover {
+            opacity: 0.7;
+        }
+    }
+
+    &__dropbtn-footer {
+        font-family: inherit;
+        text-transform: uppercase;
+        background-color: initial;
+        border: none;
+        transition-duration: var(--transition-duration);
+        color: var(--color-light);
+
+
+        @include hover {
+            opacity: 0.7;
+        }
+    }
+
+
+    &__content {
+
+        padding-inline: 10px;
+        display: none;
+        position: absolute;
+        background-color: var(--color-milk);
+        transition-duration: var(--transition-duration);
+        opacity: 1;
+        width: auto;
+        height: 80px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    &__content a {
+       position: relative;
+            display: block;
+            transition-duration: var(--transition-duration);
+
+
+             @include hover {
+
+            &::after {
+                width: 100%;
+            }
+        }
+
+        &::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        translate: -50%;
+        width: 0;
+        height: 2px;
+        background-color: currentColor;
+        transition-duration: inherit;
+
+            }
+
+            &-svg {
+                    rotate: 180deg;
+            }
+
+    }
+
+}
+
+/* Показать выпадающее меню при наведении курсора */
+.header__menu-item:hover .dropdown__content {display: block;}
+.footer__menu-item:hover .dropdown__content {display: block; background-color: var(--color-olive-alt);}
+
+
+
+
+

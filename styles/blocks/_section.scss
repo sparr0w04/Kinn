@@ -1,0 +1,9 @@
+.section {
+    @include mobile {
+        --container-padding-x:10px;
+    }
+
+     @include mobile-s {
+        --container-padding-x:0px;
+    }
+}

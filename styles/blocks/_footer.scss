@@ -1,0 +1,86 @@
+.footer {
+    background-color: var(--color-olive);
+
+    &__inner {
+        display: flex;
+        color: var(--color-milk);
+        letter-spacing: 1.2px;
+        justify-content: space-between;
+        padding-block: 64px;
+
+
+
+
+         @include mobile-s-above {
+            column-gap: 20px;
+         }
+
+        @include mobile-s {
+            flex-direction: column;
+            row-gap: 10px;
+        }
+    }
+
+      &__contacts {
+            display: flex;
+            flex-direction: column;
+            row-gap: 15px;
+
+
+
+        }
+
+
+        &__line {
+            content: "";
+            width: 40px;
+            height: 1px;
+            background-color: var(--color-light);
+        }
+
+        &__menu {
+            display: flex;
+            &-list {
+                display: flex;
+                flex-direction: column;
+                row-gap: 10px;
+                text-transform: uppercase;
+            }
+
+
+        &-item {
+            display: flex;
+            column-gap: 10px;
+
+            }
+
+             &-icon {
+            color: var(--color-dark);
+        }
+        }
+
+         &__support {
+            &-list {
+                display: flex;
+                flex-direction: column;
+                row-gap: 10px;
+                text-transform: uppercase;
+            }
+        }
+
+        &__soc1als {
+            &-list {
+                color: var(--color-dark);
+                display: flex;
+                column-gap: 20px;
+            }
+
+            &-item {
+                @include hover {
+                    color: var(--color-milk);
+                }
+             }
+        }
+
+
+}

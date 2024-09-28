@@ -1,0 +1,124 @@
+.hero {
+
+
+    display: flex;
+    flex-direction: column;
+    margin-top: 28px;
+
+
+    @include mobile {
+        margin-top: 10px;
+    }
+
+
+
+    &__main {
+        position: relative;
+
+        &-item {
+
+                position: absolute;
+                width: 42vw;
+                bottom: 64px;
+                right: 64px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-end;
+                color: var(--color-olive-alt);
+
+                @include tablet {
+                    bottom: 30px;
+                    right: 30px;
+                    text-align: end;
+                }
+
+                 @include mobile {
+                    bottom: 20px;
+                    right: 20px;
+                }
+
+
+                &-description {
+                    margin-bottom: 10px;
+                    font-size:clamp(12px, 1.083333vw, 18px);
+
+                    @include tablet {
+                        margin-bottom: 5px;
+                    }
+                }
+
+
+
+                &-button {
+                    @include reset-button;
+                    width: 154px;
+                    height: 56px;
+                    background-color: var(--color-olive-alt);
+                    color: var(--color-light);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 20px;
+
+                    @include hover {
+                        opacity: 0.7;
+                    }
+
+
+                    @include mobile {
+                    width: 100px;
+                    height: 28px;
+                    margin-top: 10px;
+                    }
+
+                    @include mobile-s {
+                    width: 80px;
+                    height: 25px;
+                    margin-top: 5px;
+                    }
+
+
+
+                }
+            }
+        }
+
+    &__body {
+        padding-top: var( --section-padding-y);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+
+         @include tablet {
+            --section-padding-y:30px;
+        }
+
+        @include mobile {
+            --section-padding-y:10px;
+            row-gap: 10px;
+        }
+
+
+        &-item {
+
+        display: flex;
+        justify-content: center;
+        column-gap: 68px;
+        }
+
+
+        &-title {
+            color: var(--color-olive-alt);
+            text-align: center;
+        }
+
+        &-link {
+           text-decoration: underline;
+           @include hover {
+           opacity: 0.7;
+           }
+        }
+    }
+}

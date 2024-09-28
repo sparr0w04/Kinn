@@ -1,0 +1,69 @@
+.connection {
+
+    &-inner {
+        padding: 63px;
+
+        @include mobile {
+            padding: 33px;
+        }
+
+    }
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 30px;
+        color: var(--color-olive-alt);
+
+        @include mobile {
+            row-gap: 15px;
+        }
+    }
+
+    &-form {
+        display: flex;
+        column-gap: 15px;
+
+        @include mobile{
+        flex-direction: column;
+        row-gap: 20px;
+        align-items: center;
+        }
+
+
+
+
+
+        &__field {
+
+            @include reset-button;
+            border-bottom: 1px solid var(--color-olive-alt);
+            width: 339px;
+            padding-inline: 10px;
+            outline: none;
+
+            @include hover {
+                opacity: 0.8;
+
+            }
+
+
+        }
+
+        &__button {
+            @include reset-button;
+            width: 144px;
+            height: 25px;
+            background-color:var(--color-olive-alt);
+            color: var(--color-milk);
+            font-size: 15px;
+
+            @include hover {
+                opacity: 0.8;
+            }
+
+
+        }
+    }
+}
