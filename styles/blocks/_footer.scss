@@ -1,6 +1,10 @@
 .footer {
     background-color: var(--color-olive);
 
+    @include tablet-above {
+        height: 330px;
+    }
+
     &__inner {
         display: flex;
         color: var(--color-milk);

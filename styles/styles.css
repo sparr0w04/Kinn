@@ -1158,6 +1158,11 @@ h4, .h4 {
 .footer {
   background-color: var(--color-olive);
 }
+@media (min-width: 1024px) {
+  .footer {
+    height: 330px;
+  }
+}
 .footer__inner {
   display: -webkit-box;
   display: -ms-flexbox;
